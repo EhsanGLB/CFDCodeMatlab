@@ -1,0 +1,9 @@
+function au_P = au_P(i, J, u, v, Ax, mu, D)
+I=i;
+%j=J;
+rho=1000;
+Fu_w=0.5*rho*(u(J,i-1)+u(J,i));
+Fu_e=0.5*rho*(u(J,i)+u(J,i+1));
+Fu_s=0.5*rho*(v(J-1,I+1)+v(J-1,I));
+Fu_n=0.5*rho*(v(J,I+1)+v(J,I));
+au_P=au_W(i, J, u, v, Ax, mu, D)+au_E(i, J, u, v, Ax, mu, D)+(Fu_e-Fu_w)+au_S(i, J, u, v, Ax, mu, D)+au_N(i, J, u, v, Ax, mu, D)+(Fu_n-Fu_s);

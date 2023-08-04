@@ -1,0 +1,9 @@
+function av_P = av_P(I, j, u, v, Ax, mu, D)
+%J=j;
+i=I;
+rho=1000;
+Fv_w=0.5*rho*(u(j+1,i-1)+u(j,i-1));
+Fv_e=0.5*rho*(u(j+1,i)+u(j,i));
+Fv_s=0.5*rho*(v(j,I)+v(j-1,I));
+Fv_n=0.5*rho*(v(j,I)+v(j+1,I));
+av_P=av_W(I, j, u, v, Ax, mu, D)+av_E(I, j, u, v, Ax, mu, D)+(Fv_e-Fv_w)+av_S(I, j, u, v, Ax, mu, D)+av_N(I, j, u, v, Ax, mu, D)+(Fv_n-Fv_s);
