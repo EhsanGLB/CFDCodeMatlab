@@ -3,7 +3,7 @@ This is a code for mixing of two drug by a T-shape written based on MATLAB.
 
 
 ## Installation
-It is working on foam-extend-4.1
+It is working on MATLAB.
 ```bash
 git clone https://github.com/EhsanGLB/CFDCodeMatlab.git
 ```
